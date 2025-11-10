@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tính Hình Chữ Nhật</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      h2 {
+        margin: 10px 0;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 20px auto;
+      }
+      td {
+        padding: 5px;
+      }
+      input[type="text"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body onload="calculateRectangle()">
+    <form name="f_rectangle">
+      <table border="0" align="center">
+        <tr>
+          <td colspan="2" align="center">
+            <h2>PERIMETER AND AREA OF RECTANGLE</h2>
+          </td>
+        </tr>
+
+        <tr>
+          <td align="right">Length:</td>
+          <td>
+            <input
+              type="text"
+              name="length"
+              value="10"
+              onblur="calculateRectangle()"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td align="right">Width:</td>
+          <td>
+            <input
+              type="text"
+              name="width"
+              value="5"
+              onblur="calculateRectangle()"
+            />
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><hr /></td>
+        </tr>
+
+        <tr>
+          <td align="right">Perimeter:</td>
+          <td>
+            <input type="text" name="perimeterResult" readonly="readonly" />
+          </td>
+        </tr>
+
+        <tr>
+          <td align="right">Area:</td>
+          <td>
+            <input type="text" name="areaResult" readonly="readonly" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      function calculateRectangle() {
+        var f = document.f_rectangle;
+        var length = parseFloat(f.length.value);
+        var width = parseFloat(f.width.value);
+
+        // Kiểm tra đầu vào hợp lệ
+        if (isNaN(length) || isNaN(width) || length <= 0 || width <= 0) {
+          f.perimeterResult.value = "Input must be a positive number";
+          f.areaResult.value = "Input must be a positive number";
+          return;
+        }
+
+        // Chu vi: P = 2 * (dài + rộng)
+        var perimeter = 2 * (length + width);
+
+        // Diện tích: A = dài * rộng
+        var area = length * width;
+
+        // Hiển thị kết quả
+        f.perimeterResult.value = perimeter.toFixed(2);
+        f.areaResult.value = area.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

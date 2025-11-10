@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <link rel="stylesheet" href="CV.css">
+    <nav id="topmenu">
+        <ul>
+            <li><a href="#hocvanme">Học Vấn</a></li>
+            <li><a href="#kinhnghiem">Kinh Nghiệm</a></li>
+            <li><a href="#sothich">Sở Thích</a></li>
+            <li><a href="#video">Video</a></li>
+        </ul>
+    </nav>
+    <header style="text-align: center;">
+        <img src="bear.jpg" alt="Hình ảnh của mình" style="border-radius: 50%;">
+    </header>
+    
+    <hr>
+
+    <section>
+        <h1 style="color: darkcyan;">Pham Duy Quang</h1>
+        <h3>Ngay sinh: 31/01/2004
+            <br>
+            Dia chi: Ha Noi
+            <br>
+            Email: quangmkmkmk2004@gmail.com
+        </h3>
+
+        <a style="color: coral;"> For more infomations about me:</a>
+        <br>
+        <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">More Infomations</a>
+     
+    <h2>Học Vấn</h2>
+    <ul>
+        <li>Trường: Quốc tế-ĐHQGHN</li>
+        <li>Ngành: Hệ thống thông tin quản lý</li>
+        <li>Sinh viên năm 4</li>
+    </ul>
+    
+    <h2>Kinh nghiem lam viec</h2>
+    <ul>
+        <li>Thực tập tại FPT</li>
+    </ul>
+
+ 
+<hr>
+<h2>Sở thích</h2>
+<ul>
+    <li>Chơi game</li>
+    <li>Nghe nhạc</li>
+</ul>
+
+<hr>
+    <header style="text-align: center;">
+    <h2 style="color: crimson;">Some videos about decoration</h2>
+
+    <video
+        width="320"
+        height="240"
+        controls
+        >
+        <source src="Video for week 4.mp4" type="video/mp4">
+    </video>
+    </header>
+    <hr>
+    <h1>Contact Form</h1>
+
+    <form>
+      <label for="your_name">input your name</label>
+      <input type="text" id="your_name" name="your_name" />
+      <br />
+      <label for="your_name">input your email</label>
+      <input type="email" id="your_email" name="your_email" />
+      <br />
+      <label for="checkbox_sample">Checkbox:</label>
+      <br />
+      <label for="course1">Course1</label>
+      <input
+        type="checkbox"
+        name="courses_attended"
+        id="course1"
+        value="course1"
+      />
+      <br />
+      <label for="course2">Course2</label>
+      <input
+        type="checkbox"
+        name="courses_attended"
+        id="course2"
+        value="course2"
+      />
+      <br />
+      <label for="prefered_contact">Your prefered contact</label>
+      <input
+        type="radio"
+        name="prefered_contact"
+        id="contact_email"
+        value="email"
+      />
+      <label for="contact_email">Email</label>
+      <input
+        type="radio"
+        name="prefered_contact"
+        id="contact_phone"
+        value="phone"
+      />
+      <label for="contact_phone">Phone</label>
+      <br />
+      <label for="gender">Gender</label>
+      <select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <br />
+      <input type="file" name="file" id="file" />
+      <br />
+      <textarea name="large_text" id="large_text" row="5"></textarea>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+
+
+</body>
+</html>
